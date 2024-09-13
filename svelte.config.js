@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-cloudflare';
 import dotenv from 'dotenv';
 dotenv.config();
 /** @type {import('@sveltejs/kit').Config} */
