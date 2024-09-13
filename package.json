@@ -26,6 +26,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@eslint/config-array": "^0.18.0",
 		"@supabase/supabase-js": "^2.45.4",
 		"dotenv": "^16.4.5",
 		"npm": "^10.8.3",
