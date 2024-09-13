@@ -1,9 +1,10 @@
 import { supabase } from "$lib/supabaseClient";
-import { generateFromEmail, generateUsername } from "unique-username-generator";
+
 
 export const actions = {
 	default: async ({ request }) => {
 		const formData = await request.formData();
+		console.log(formData);
 		const { data, error } = await supabase
 			.from('music')
 			.insert([
