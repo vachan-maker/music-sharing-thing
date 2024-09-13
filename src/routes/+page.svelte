@@ -7,7 +7,7 @@
 		<label for="name-of-song">Enter name of song(label)</label>
 		<input type="text" name="name-of-song" id="name-of-song" />
 		<label for="url-spotify">Enter Spotify URL</label>
-		<input type="url" id="url-spotify" name="url-spotify" required />
+		<input type="url" id="url-spotify" name="url-spotify" pattern=".*spotify.*"required />
 		<label for="description-field">Write something about the song</label>
 		<input
 			type="text"
@@ -20,11 +20,12 @@
 	</form>
 </main>
 
-<section class="container">
+<section class="container flex-col">
 	{#each data.music as m}
 		<article>
 			<header>
 				<h3>{m.title}</h3>
+				<p>Posted on {m.created_at}</p>
 			</header>
 			<main>
 				<p>{m.description}</p>
@@ -37,5 +38,9 @@
 <style>
 	.form-container {
 		padding-bottom: 2rem;
+	}
+	.flex-col {
+		display: flex;
+		flex-direction: column-reverse;
 	}
 </style>
