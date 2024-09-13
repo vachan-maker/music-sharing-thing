@@ -1,13 +1,14 @@
 <script>
 	export let data;
+    export let form;
 </script>
 
 <main class="container form-container">
-    <form method="POST" action="/submit">
+    <form method="POST">
         <label for="url-spotify">Enter Spotify URL</label>
-	<input type="url" pattern="^https:\/\/open\.spotify\.com\/(track|album|playlist|artist|show)\/[a-zA-Z0-9]{22}$" id="url-spotify"/>
+	<input type="url" id="url-spotify" name="url-spotify" required/>
     <label for="description">Write something about the song</label>
-	<input type="text" id="description" placeholder="Tell us why you love/hate the song..hehe"/>
+	<input type="text" id="description" placeholder="Tell us why you love/hate the song..hehe" name="description" required/>
 	<button>Submit</button>
     </form>
 </main>

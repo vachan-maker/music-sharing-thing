@@ -1,6 +1,13 @@
+import { supabase } from "$lib/supabaseClient";
+
 export const actions = {
-	create: async ({ request }) => {
-		const data = await request.formData();
-		console.log(data);
+	default: async ({ request }) => {
+		const formData = await request.formData();
+		const { data, error } = await supabase
+  .from('music')
+  .insert([
+    { url: formData.get('url-spotify'), description: formData.get('description') },
+  ])
+  .select()
 	}
 };
