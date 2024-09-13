@@ -5,11 +5,12 @@
 </script>
 
 <Form />
-<section class="container">
+<section class="container flex-col">
 	{#each data.music as m}
 		<article>
 			<header>
 				<h3>{m.title}</h3>
+                <p>Posted on: {m.created_at}</p>
 			</header>
 			<main>
 				<p>{m.description}</p>
@@ -18,3 +19,9 @@
 		</article>
 	{/each}
 </section>
+<style>
+    .flex-col {
+        display:flex;
+        flex-direction: column-reverse;
+    }
+</style>
