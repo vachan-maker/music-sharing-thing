@@ -5,6 +5,8 @@
 
 <main class="container form-container">
     <form method="POST">
+        <label for="name-of-song">Enter name of song(label)</label>
+    <input type="text" name="name-of-song" id="name-of-song"/>
         <label for="url-spotify">Enter Spotify URL</label>
 	<input type="url" id="url-spotify" name="url-spotify" required/>
     <label for="description">Write something about the song</label>
@@ -15,7 +17,9 @@
 <section class="container">
 {#each data.music as m}
 	<article>
-        <header></header>
+        <header>
+            <h3>{m.title}</h3>
+        </header>
         <main>
             <p>{m.description}</p>
             <a href="{m.url}">Listen to Song</a>
