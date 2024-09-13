@@ -1,3 +1,2 @@
 import { createClient } from '@supabase/supabase-js'
-import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY } from '$env/static/public';
-export const supabase = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_ANON_KEY);
+export const supabase = createClient('https://fcxbseidtltebsdzbiie.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZjeGJzZWlkdGx0ZWJzZHpiaWllIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjYyMjM2MTAsImV4cCI6MjA0MTc5OTYxMH0.XDY8arMsEsHgn84f5PkDvpfeQvL9hGoOLE-ri9Z2v9I');
