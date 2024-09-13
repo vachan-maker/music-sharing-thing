@@ -8,10 +8,10 @@
 		<input type="text" name="name-of-song" id="name-of-song" />
 		<label for="url-spotify">Enter Spotify URL</label>
 		<input type="url" id="url-spotify" name="url-spotify" required />
-		<label for="description">Write something about the song</label>
+		<label for="description-field">Write something about the song</label>
 		<input
 			type="text"
-			id="description"
+			id="description-field"
 			placeholder="Tell us why you love/hate the song..hehe"
 			name="description"
 			required
