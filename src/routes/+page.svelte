@@ -8,8 +8,7 @@
 	{#each data.music as m}
 		<article>
 			<header>
-				<h3>{m.title}</h3>
-				<p><strong>{m.title}</strong> posted on {m.created_at}</p>
+				<p><strong>Posted by {m.title}</strong>on {m.created_at}</p>
 				<p>{m.description}</p>
 			</header>
 			<main>
