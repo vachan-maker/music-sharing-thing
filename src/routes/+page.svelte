@@ -1,44 +1,25 @@
 <script>
+	import Form from "./form.svelte";
+
 	export let data;
 </script>
-
-<main class="container form-container">
-	<form method="POST">
-		<label for="name-of-song">Enter name of song</label>
-		<input type="text" name="name-of-song" id="name-of-song" />
-		<label for="url-spotify">Enter <strong>Spotify</strong> URL</label>
-		<input type="url" id="url-spotify" name="url-spotify" pattern=".*spotify.*"required />
-		<label for="description-field">Write something about the song</label>
-		<input
-			type="text"
-			id="description-field"
-			placeholder="Tell us why you love/hate the song..hehe"
-			name="description"
-			required
-		/>
-		<button>Submit</button>
-	</form>
-</main>
-
+<Form/>
 <section class="container flex-col">
 	{#each data.music as m}
 		<article>
 			<header>
 				<h3>{m.title}</h3>
-				<p>Posted on {m.created_at}</p>
+				<p><strong>{m.title}</strong> posted on {m.created_at}</p>
+				<p>{m.description}</p>
 			</header>
 			<main>
-				<p>{m.description}</p>
-				<a href={m.url}>Listen to Song</a>
+				<iframe title = "spotify" style="border-radius:12px" src="https://open.spotify.com/embed/track/{m.trackId}?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 			</main>
 		</article>
 	{/each}
 </section>
 
 <style>
-	.form-container {
-		padding-bottom: 2rem;
-	}
 	.flex-col {
 		display: flex;
 		flex-direction: column-reverse;
