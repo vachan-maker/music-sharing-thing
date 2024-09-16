@@ -6,6 +6,7 @@
 </script>
 <Form/>
 <section class="container flex-col">
+	<h2>Recent Posts</h2>
 	{#each data.music as m}
 		<article>
 			<header>
