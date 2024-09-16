@@ -1,5 +1,8 @@
+<script>
+	import { enhance, applyAction } from '$app/forms';
+</script>
 <main class="container form-container">
-	<form method="POST">
+	<form method="POST" use:enhance>
 		<label for="name-of-user">Your name (nickname or anything)</label>
 		<input type="text" name="name-of-user" id="name-of-user" />
 		<label for="url-spotify">Enter <strong>Spotify</strong> URL</label>
@@ -12,7 +15,7 @@
 			name="description"
 			required
 		/>
-		<button>Submit</button>
+		<button type="submit">Submit</button>
 	</form>
 </main>
 

@@ -2,6 +2,7 @@
 	import Form from "./form.svelte";
 
 	export let data;
+	export let form;
 </script>
 <Form/>
 <section class="container flex-col">
